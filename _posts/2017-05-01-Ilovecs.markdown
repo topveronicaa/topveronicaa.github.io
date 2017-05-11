@@ -1,0 +1,8 @@
+---
+layout: post
+title:  I love CS
+date:   2017-05-01 22:13:46 -0400
+categories: jekyll update
+---
+
+I have learnt CS for one year and I really love it!
