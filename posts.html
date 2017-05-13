@@ -29,11 +29,11 @@ font-size: 20px;
 <body>
 
 <h2 class = "post">Posts</h2>
-<div class = "posts">
+<center><div class = "posts">
 {% for post in site.posts %}
 		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
 		<h3 class = "posts"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
 {% endfor %}
-<div>
+	</div></center>
 
 </body>
