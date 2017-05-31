@@ -28,7 +28,7 @@ font-size: 20px;
 </head>
 <body>
 
-<h2 class = "post">Posts</h2>
+<h2 class = "post">Posts</h2> <input class="search__input" type="text" placeholder="Search">
 <center><div class = "posts">
 {% for post in site.posts %}
 		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
