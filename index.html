@@ -17,10 +17,10 @@ font-family: 'source sans pro';
 font-size: 23px;
 font-weight: light;
 }
-  time#msg{
-    font-family: 'Satisfy';
-    font-size: 20px;
-  }
+time#msg {
+font-family: 'Satisfy';
+font-size: 20px;
+}
 img.main {
 margin-top: 15px;
 border-radius: 50%;
@@ -37,19 +37,13 @@ margin-bottom: 400px;
 <center><img class="main" src="https://s-media-cache-ak0.pinimg.com/736x/3a/a8/89/3aa889c57291df2aaf526ef721bbf8ca.jpg" height = 280px width = 280px/></center>
 <p class="main">I'm Veronica Han, a computer science student at University of Waterloo.</p>
 <p class="main">Welcome to my personal website :)</p>
-<p class ="main"> Visiting on: </p>
+<p class="main">Visiting on:</p>
 <center><time id="msg"></time></center>
-
 <script>
-  // Create a JavaScript Date object for the current date and time, and set the desired options.
   var date = new Date(),
       options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
- 
-  // Convert to locale string and add a locale and the options
   date = date.toLocaleString( "en-US", options );
- 
-  // Output the date to the above HTML element
-  document.getElementById("msg").innerHTML = date;
+ document.getElementById("msg").innerHTML = date;
 </script>
 </div>
 
