@@ -5,18 +5,22 @@ layout: default
 <head>
 <title>Main</title>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 
 <style>
 * {
 background-color: whitesmoke;
 }
-p.main,
-  time#msg {
+p.main,{
 text-align: center;
 font-family: 'source sans pro';
 font-size: 24px;
 font-weight: light;
 }
+  time#msg{
+    font-family: 'Satisfy';
+    font-size: 20px;
+  }
 img.main {
 margin-top: 20px;
 border-radius: 50%;
@@ -34,7 +38,7 @@ margin-bottom: 400px;
 <p class="main">I'm Veronica Han, a computer science student at University of Waterloo.</p>
 <p class="main">Welcome to my personal website :)</p>
   <p class = "main"> Visiting on: </p>
-    <time id="msg"></time>
+  <center><time id="msg"></time></center>
 
 <script>
   // Create a JavaScript Date object for the current date and time, and set the desired options.
