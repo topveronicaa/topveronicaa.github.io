@@ -38,19 +38,20 @@ input[type=text] {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 	}
+	input[type=text]:focus {
+    width: 100%;
+}
 	</style>
 </head>
 <body>
 
 <h2 class = "post">Posts</h2> 
 	
-input[type=text]:focus {
-    width: 100%;
-}
-<p>Animated search form:</p>
-<form>
+
+
+<center><form>
   <input type="text" name="search" placeholder="Search..">
-</form>
+</form></center>
 <center><div class = "posts">
 {% for post in site.posts %}
 		<time>{{ post.date | date: "%b %-d, %Y" }}</time>
