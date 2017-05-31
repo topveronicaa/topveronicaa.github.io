@@ -34,6 +34,14 @@ margin-bottom: 400px;
 <center><img class="main" src="https://s-media-cache-ak0.pinimg.com/736x/3a/a8/89/3aa889c57291df2aaf526ef721bbf8ca.jpg" height = 300px width = 300px/></center>
 <p class="main">I'm Veronica Han, a computer science student at University of Waterloo.</p>
 <p class="main">Welcome to my personal website :)</p>
+<p class="main">Visiting on:</p>
+<center><time id="msg"></time></center>
+<script>
+  var date = new Date(),
+      options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
+  date = date.toLocaleString( "en-US", options );
+ document.getElementById("msg").innerHTML = date;
+</script>
 </div>
 
 </body>
