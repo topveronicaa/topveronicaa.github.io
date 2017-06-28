@@ -38,8 +38,56 @@ th.head {
 font-family: "Ayuthaya";
 font-size: 20px;
 }
+  
+body, html {
+    height: 100%;
+    margin: 0;
+}
 
+.hero-image {
+  background-image: url("photographer.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
 </style>
+
+
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">I am Veronica Han</h1>
+  </div>
+</div>
+
 
 <p class = "about">About Me</p>
 <center><table class = "about">
@@ -62,3 +110,5 @@ font-size: 20px;
     <td class="about">Besides what I major at, I also enjoy music, travelling, reading and working-out. You can find more about my interests in posts on this site.
   </tr>
 </table></center>
+  
+</body>
