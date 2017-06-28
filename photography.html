@@ -28,8 +28,62 @@ margin-top: 50px;
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body>
+  
 <h1 class = "pho">Photography</h1>
-<div class = "pho">
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="http://i.imgur.com/V4xIFQ5.jpg" style="width:100%">
+    <div class="text">Sakura</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 2</div>
+    <img src="http://i.imgur.com/CAvbhdD.jpg" style="width:100%">
+    <div class="text">Chinese Dimsum</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+</div>
+  
+  <script>
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  
+
+  <div class = "pho">
 <center>
 <img src="http://i.imgur.com/CAvbhdD.jpg" height = 600px width = 600px/>
 <p class="img">Chinese Dim sum -- May 20,2016</p>
