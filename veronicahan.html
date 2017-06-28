@@ -12,6 +12,23 @@ permalink: /veronicahan/
 
 
 <style>
+  
+  a:link {
+    color: black;
+}
+/* visited link */
+a:visited {
+    color: black;
+}
+/* mouse over link */
+a:hover {
+    color: grey;
+}
+/* selected link */
+a:active {
+    color: grey;
+}
+  
 p.main{
 text-align: center;
 font-family: 'source sans pro';
@@ -30,20 +47,25 @@ div.main {
 margin-top: 50px;
 margin-bottom: 400px;
 }
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+  
 /*image overloading */
   .container {
   position: relative;
-  width: 800px;
-  height: 450px;
-  margin-top: 70px;
+  width: 950px;
+  height: 550px;
+    margin-top: 0;
 }
   
   .image {
   display: block;
-  width: 800px;
-  height: 450px;
-  margin-top: 70px;
-}
+  width: 950px;
+    height: 550px;
+    margin-top: 0;
+ }
   
 .overlay {
   position: absolute;
@@ -75,9 +97,9 @@ margin-bottom: 400px;
   * {box-sizing:border-box}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 800px;
+  max-width: 950px;
   position: relative;
-  margin-top: 70px;
+  margin-top: 0px;
 }
 .mySlides {
     display: none;
@@ -149,27 +171,31 @@ margin-bottom: 400px;
     
     <div class="mySlides fade">
     <div class="container">
-  <img src="http://i.imgur.com/wizuqDw.png" alt="Avatar" class="image">
+  <img src="http://i.imgur.com/u4Gk3zr.jpg" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text">Everything about Chinese DimSum --  See "Post"</div>
+    <div class="text"><a href="https://topveronicaa.github.io/photography/">See "Photography"</a></div>
   </div>
       </div>
   </div>
     
-  <div class="mySlides fade">
+    <div class="mySlides fade">
     <div class="container">
-  <img src="http://i.imgur.com/u4Gk3zr.jpg" alt="Avatar" class="image">
+  <img src="http://4.bp.blogspot.com/-diw0x3XcHGs/UyMGmg4ucvI/AAAAAAAAD2M/YqF_KaqQnj8/s1600/DSC_6690.JPG" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text">See "Photography"</div>
+    <div class="text"><a href="https://topveronicaa.github.io/jekyll/update/2017/05/08/dimsum.html">Everything about Chinese DimSum --  See "Post"</a></div>
   </div>
       </div>
   </div>
+    
+  
+    
+    
 
   <div class="mySlides fade">
     <div class="container">
-  <img src="http://i.imgur.com/EpipMYr.jpg" alt="Avatar" class="image">
+  <img src="http://i.imgur.com/GA9LdgU.jpg" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text">See "About me"</div>
+    <div class="text"><a href="https://topveronicaa.github.io/aboutme/">See "About me"</a></div>
   </div>
       </div>
   </div>
@@ -220,7 +246,8 @@ function showSlides(n) {
   <div class = "main">
 
   
-<p class="main">Personal website of Veronica Han.</p>
+<p class="main">Welcome,this is Veronica Han. I'm studying Computer Science at University of Waterloo.</p>
+    <p class="main">I do web developing and testing. Know more about me <a href="https://topveronicaa.github.io/aboutme/">HERE</a> </p>
 <center><time id="msg"></time></center>
 
     <script>
