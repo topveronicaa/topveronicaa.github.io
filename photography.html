@@ -118,15 +118,15 @@ margin-top: 50px;
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
-  color: white;
+  background-color: LavenderBlush;
+  color: black;
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: LavenderBlush;
 }
   
 </style>
@@ -234,11 +234,11 @@ function showSlides(n) {
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   
   <script>
-// When the user scrolls down 20px from the top of the document, show the button
+// When the user scrolls down 80px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
         document.getElementById("myBtn").style.display = "block";
     } else {
         document.getElementById("myBtn").style.display = "none";
