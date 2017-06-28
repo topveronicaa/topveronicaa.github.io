@@ -1,16 +1,15 @@
 ---
-layout: page
-title: Veronica Han
-permalink: /veronicahan/
+layout: default
 ---
 
 <head>
 <title>Main</title>
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
+
 
 <style>
-
 p.main{
 text-align: center;
 font-family: 'source sans pro';
@@ -29,22 +28,207 @@ div.main {
 margin-top: 50px;
 margin-bottom: 400px;
 }
+/*image overloading */
+  .container {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  margin-top: 70px;
+}
+  
+  .image {
+  display: block;
+  width: 800px;
+  height: 450px;
+  margin-top: 70px;
+}
+  
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: MistyRose;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: black;
+  font-size: 50px;
+  font-family: 'Cutive', serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+  
+  
+  * {box-sizing:border-box}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin-top: 70px;
+}
+.mySlides {
+    display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+  
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+  
 </style>
 </head>
 
 <body>
-<div class = "main">
-<center><img class="main" src="https://s-media-cache-ak0.pinimg.com/736x/3a/a8/89/3aa889c57291df2aaf526ef721bbf8ca.jpg" height = 280px width = 280px/></center>
-<p class="main">I'm Veronica Han, a computer science student at University of Waterloo.</p>
-<p class="main">Welcome to my personal website :)</p>
-<p class="main">Visiting on:</p>
+
+  <center><div class="slideshow-container">
+    
+    <div class="mySlides fade">
+    <div class="container">
+  <img src="http://i.imgur.com/wizuqDw.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Everything about Chinese DimSum --  See "Post"</div>
+  </div>
+      </div>
+  </div>
+    
+  <div class="mySlides fade">
+    <div class="container">
+  <img src="http://i.imgur.com/u4Gk3zr.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">See "Photography"</div>
+  </div>
+      </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="container">
+  <img src="http://i.imgur.com/EpipMYr.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">See "About me"</div>
+  </div>
+      </div>
+  </div>
+  
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div></center>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+  
+  
+  <script>
+  
+    var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+                              </script>
+
+  
+  
+  
+  <div class = "main">
+
+  
+<p class="main">Personal website of Veronica Han.</p>
 <center><time id="msg"></time></center>
-<script>
-  var date = new Date(),
+
+    <script>
+  
+      var date = new Date(),
       options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
   date = date.toLocaleString( "en-US", options );
  document.getElementById("msg").innerHTML = date;
-</script>
-</div>
+    </script>
+
+  </div>
 
 </body>
