@@ -30,7 +30,7 @@ font-weight: light;
 <center><table class="hea">
 <tr>
 {% for page in site.pages %} {% if page.title %}
-<th class="hea"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></th>
+<th class="hea"><a href="{{ page.url | prepend: site.baseurl }}"><button class="button"><span>{{ page.title }}</span></button></a></th>
 {% endif %} {% endfor %}
 </tr>
 </table>
