@@ -27,7 +27,22 @@ margin-top: 50px;
 margin-bottom: 400px;
 }
 
+/*image overloading */
+  .container {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  margin-top: 70px;
+}
+  
+  .image {
+  display: block;
+  width: 700px;
+  height: 400px;
+  margin-top: 70px;
+}
 
+  
 .overlay {
   position: absolute;
   top: 0;
@@ -54,6 +69,7 @@ margin-bottom: 400px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+  
   
   * {box-sizing:border-box}
 
@@ -165,21 +181,29 @@ margin-bottom: 400px;
     <div class="container">
   <img src="http://i.imgur.com/V62Y84p.jpg" alt="Avatar" class="image">
   <div class="overlay">
-    <div class="text">Hello World</div>
+    <div class="text">Everything about Chinese DimSum -- Post</div>
   </div>
       </div>
   </div>
     
   <div class="mySlides fade">
     <div class="numbertext">2 / 4</div>
-    <img src="http://i.imgur.com/V62Y84p.jpg" style="width:700px; height: 400px">
-    <div class="text">Australia</div>
+    <div class="container">
+  <img src="http://i.imgur.com/V62Y84p.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Photography</div>
+  </div>
+      </div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 4</div>
-    <img src="http://i.imgur.com/zZnBk4W.jpg" style="width:700px; height: 400px">
-    <div class="text">Australia</div>
+    <div class="container">
+  <img src="http://i.imgur.com/V62Y84p.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">About me</div>
+  </div>
+      </div>
   </div>
    
     
